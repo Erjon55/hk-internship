@@ -3,7 +3,7 @@ package hotelkey.domain;
 import java.util.Date;
 import java.util.UUID;
 
-public class User {
+public class User implements Comparable<User> {
     String id;
     private String firstName;
     private String lastName;
@@ -14,7 +14,8 @@ public class User {
     private String role;
 
     public User() {
-        id = UUID.randomUUID().toString();
+        this(UUID.randomUUID().toString(), "Guest", "User",
+                "guest@example.com", "N/A", "N/A", new Date(), "Guest");
     }
 
     public User(String id, String firstName, String lastName, String email, String address, String phone, Date dateOfBirth, String role) {
@@ -110,5 +111,10 @@ public class User {
         if (this == obj) return true;
         if (obj == null || this.getClass() != obj.getClass()) return false;
         return this.id.equals(((User) obj).id);
+    }
+
+    @Override
+    public int compareTo(User o) {
+        return this.email.compareTo(o.email);
     }
 }
