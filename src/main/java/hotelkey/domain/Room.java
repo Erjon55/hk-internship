@@ -1,9 +1,9 @@
 package hotelkey.domain;
 
 public abstract class Room implements Bookable {
-    protected int roomNumber;
+    public int roomNumber;
 
-    protected double basePrice;
+    public double basePrice;
 
     private boolean isBooked;
 
