@@ -33,14 +33,14 @@ public class Main {
 
         Room standard = new StandardRoom(8, 0.5);
 
-        Guest rinesa = new Guest("Rinesa", "LastName");
-        Guest ari = new Guest("Ari", "LastName");
-        Guest diellza = new Guest("Diellza", "LastName");
+        Guest guest1 = new Guest("Guest1", "LastName");
+        Guest guest2 = new Guest("Guest2", "LastName");
+        Guest guest3 = new Guest("Guest3", "LastName");
 
         Map<Room, Guest> guestRoomMap = new HashMap<>();
-        guestRoomMap.put(standardRoom, ari);
-        guestRoomMap.put(deluxeRoom, diellza);
-        guestRoomMap.put(standard, rinesa);
+        guestRoomMap.put(standardRoom, guest2);
+        guestRoomMap.put(deluxeRoom, guest3);
+        guestRoomMap.put(standard, guest1);
 
 
         //TODO - print the guest who is staying at deluxe room
